@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pagination-button {
+  @apply transition-all bg-white text-black border border-black flex h-8 w-8 items-center justify-center cursor-pointer hover:bg-gray-500 hover:text-white
+}
+
+.pagination-button:disabled {
+  @apply pointer-events-none cursor-auto opacity-20
+}
+
+.pagination-button_active {
+  @apply pointer-events-none cursor-auto text-white bg-gray-400
+}
+
+body * {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: white rgba(white, 0.1);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(white, 0.1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 100%;
+    border: 3px solid rgba(white, 0.1);
+  }
+}
